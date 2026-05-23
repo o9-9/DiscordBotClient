@@ -1,4 +1,4 @@
-/* Copyright Elysia © 2025. All rights reserved */
+/* Copyright o9 © 2025. All rights reserved */
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-nocheck

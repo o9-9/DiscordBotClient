@@ -1,4 +1,4 @@
-/* Copyright Elysia © 2025. All rights reserved */
+/* Copyright o9 © 2025. All rights reserved */
 
 import { readFileSync } from "fs";
 import { v3 } from "murmurhash";

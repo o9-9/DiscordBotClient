@@ -1,4 +1,4 @@
-/* Copyright Elysia © 2025 */
+/* Copyright o9 © 2025 */
 
 import { spawn } from "child_process";
 import path from "path";

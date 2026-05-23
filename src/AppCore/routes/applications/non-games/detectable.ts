@@ -1,4 +1,4 @@
-/* Copyright Elysia © 2026. All rights reserved */
+/* Copyright o9 © 2026. All rights reserved */
 
 import { Router } from "express";
 

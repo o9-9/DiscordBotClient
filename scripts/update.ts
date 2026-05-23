@@ -1,4 +1,4 @@
-/* Copyright Elysia © 2025 */
+/* Copyright o9 © 2025 */
 
 import { fetch } from "undici";
 import path from "path";

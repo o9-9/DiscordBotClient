@@ -1,4 +1,4 @@
-/* Copyright Elysia © 2025. All rights reserved */
+/* Copyright o9 © 2025. All rights reserved */
 
 export class IPCEvent extends null {
     static Close = "app:window:close";

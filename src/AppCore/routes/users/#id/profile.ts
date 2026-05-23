@@ -1,4 +1,4 @@
-/* Copyright Elysia © 2025. All rights reserved */
+/* Copyright o9 © 2025. All rights reserved */
 
 import { APIApplication, APIGuildMember, APIUser } from "discord-api-types/v10";
 import { net } from "electron";

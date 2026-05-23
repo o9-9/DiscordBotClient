@@ -1,4 +1,4 @@
-/* Copyright Elysia © 2025. All rights reserved */
+/* Copyright o9 © 2025. All rights reserved */
 
 // The source code below is taken from the Lambert-server library.
 // Credits to the original authors and contributors of Lambert-server for their work.
