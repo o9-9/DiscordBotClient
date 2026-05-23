@@ -333,9 +333,9 @@ export class DiscordBotClient extends EventEmitter {
                 callback({ responseHeaders: details.responseHeaders });
             },
         );
-        // Load Equicord-Web Extension
-        const extension = await this.session.extensions.loadExtension(Constants.EquicordExtensionPath);
-        this.logger.info(`Loaded Equicord Extension v${extension.version} from ${Constants.EquicordExtensionPath}`);
+        // Load Vencord-Web Extension
+        const extension = await this.session.extensions.loadExtension(Constants.VencordExtensionPath);
+        this.logger.info(`Loaded Vencord Extension v${extension.version} from ${Constants.VencordExtensionPath}`);
     }
     async createWindow () {
         this.setupTray();

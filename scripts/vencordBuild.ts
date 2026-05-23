@@ -26,58 +26,58 @@ function runCommand(cmd: string, args: string[], opts: { cwd?: string } = {}): P
     });
 }
 
-async function buildEquicord() {
+async function buildVencord() {
     const root = process.cwd();
-    const equicordDir = path.join(root, "Equicord");
+    const vencordDir = path.join(root, "Vencord");
 
-    console.log("➡️  Building Equicord (web) ...");
+    console.log("➡️  Building Vencord (web) ...");
     await runCommand(
         process.execPath,
         ["--require", "./scripts/suppressExperimentalWarnings.js", "scripts/build/buildWeb.mjs"],
         {
-            cwd: equicordDir,
+            cwd: vencordDir,
         },
     );
-    console.log("✅ Equicord build finished.");
+    console.log("✅ Vencord build finished.");
 }
 
 function copyAndPatch() {
     const root = process.cwd();
-    const finalFolder = path.resolve(root, "EquicordExtension");
+    const finalFolder = path.resolve(root, "VencordExtension");
 
     if (existsSync(finalFolder)) {
         rmSync(finalFolder, { recursive: true });
-        console.info("Removed the old Equicord Extension folder:", finalFolder);
+        console.info("Removed the old Vencord Extension folder:", finalFolder);
     }
 
-    const equicordBuildPath = path.resolve(root, "Equicord", "dist", "chromium-unpacked");
-    renameSync(equicordBuildPath, finalFolder);
+    const vencordBuildPath = path.resolve(root, "Vencord", "dist", "chromium-unpacked");
+    renameSync(vencordBuildPath, finalFolder);
 
-    rmSync(path.resolve(root, "Equicord", "dist"), { recursive: true });
-    console.info("Moved the newly built Equicord Extension folder to", finalFolder);
+    rmSync(path.resolve(root, "Vencord", "dist"), { recursive: true });
+    console.info("Moved the newly built Vencord Extension folder to", finalFolder);
 
-    // Patch Equicord.js
-    const equicordPath = path.resolve(finalFolder, "dist", "Equicord.js");
-    const equicordContent = readFileSync(equicordPath, "utf-8");
+    // Patch Vencord.js
+    const vencordPath = path.resolve(finalFolder, "dist", "Vencord.js");
+    const vencordContent = readFileSync(vencordPath, "utf-8");
 
-    const patchedEquicord = equicordContent.replace(
+    const patchedVencord = vencordContent.replace(
         "getInfoRows(){",
         "getInfoRows(){let rows = this.getInfoRowsDefault();rows.unshift(`${window.BotClientNative.getBotClientName()} ${window.BotClientNative.getBotClientVersion()}`);return rows},getInfoRowsDefault(){",
     );
 
-    if (patchedEquicord === equicordContent) {
-        console.info("Equicord.js is already patched / Cannot patch Equicord.js");
+    if (patchedVencord === vencordContent) {
+        console.info("Vencord.js is already patched / Cannot patch Vencord.js");
         console.info("Please check if the file is already patched or if the patch is correct.");
         process.exit(0);
     }
 
-    writeFileSync(equicordPath, patchedEquicord);
-    console.info("Patched Equicord.js successfully");
+    writeFileSync(vencordPath, patchedVencord);
+    console.info("Patched Vencord.js successfully");
 }
 
 async function main() {
     try {
-        await buildEquicord();
+        await buildVencord();
         copyAndPatch();
         console.log("🎉 All done.");
     } catch (err) {

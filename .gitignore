@@ -91,10 +91,10 @@ out
 .nuxt
 /dist
 /Vencord
-/Equicord
+/Vencord
 /build
 /VencordExtension
-/EquicordExtension
+/VencordExtension
 /discohook
 /assets/editor
 
