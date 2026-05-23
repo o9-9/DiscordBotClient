@@ -1,4 +1,4 @@
-/* Copyright Elysia © 2025. All rights reserved */
+/* Copyright o9 © 2025. All rights reserved */
 
 import { DiscordSnowflake } from "@sapphire/snowflake";
 import { APIGuild } from "discord-api-types/v10";
@@ -18,7 +18,7 @@ function createFakeBoost (guildId: string) {
         pause_ends_at: null,
         user: {
             id: botId,
-            username: "elysia",
+            username: "o9",
             global_name: "DiscordBotClient",
             avatar: null,
             avatar_decoration_data: null,

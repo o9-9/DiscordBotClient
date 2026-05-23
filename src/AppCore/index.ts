@@ -1,4 +1,4 @@
-/* Copyright Elysia © 2025. All rights reserved */
+/* Copyright o9 © 2025. All rights reserved */
 
 import { randomUUID } from "crypto";
 import {
@@ -243,7 +243,7 @@ export class DiscordBotClient extends EventEmitter {
             ]);
             app.whenReady().then(async () => {
                 this.logger.info("Creating session...");
-                this.customSession = session.fromPartition("persist:elysia_dbc");
+                this.customSession = session.fromPartition("persist:o9_dbc");
                 // Enable DoH (Cloudflare)
                 app.configureHostResolver({
                     enableBuiltInResolver: true,
@@ -333,9 +333,9 @@ export class DiscordBotClient extends EventEmitter {
                 callback({ responseHeaders: details.responseHeaders });
             },
         );
-        // Load Vencord-Web Extension
-        const extension = await this.session.extensions.loadExtension(Constants.VencordExtensionPath);
-        this.logger.info(`Loaded Vencord Extension v${extension.version} from ${Constants.VencordExtensionPath}`);
+        // Load Equicord-Web Extension
+        const extension = await this.session.extensions.loadExtension(Constants.EquicordExtensionPath);
+        this.logger.info(`Loaded Equicord Extension v${extension.version} from ${Constants.EquicordExtensionPath}`);
     }
     async createWindow () {
         this.setupTray();

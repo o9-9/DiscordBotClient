@@ -1,13 +1,13 @@
-/* Copyright Elysia © 2025. All rights reserved */
+/* Copyright o9 © 2025. All rights reserved */
 
 import { APIUser } from "discord-api-types/v10";
 
 export default {
-    "1056491867375673424": {
-        id: "1056491867375673424",
-        username: "aiko-chan-ai",
-        global_name: "Elysia",
-        avatar: "93fb88f6b8c0a2a33c437d0fff4c6625",
+    "1020801845490356245": {
+        id: "1020801845490356245",
+        username: "o9-9",
+        global_name: "o9",
+        avatar: "ff035c640819d888fd32c59a1d1e7780",
         avatar_decoration: null,
         discriminator: "0000",
         public_flags: 1,

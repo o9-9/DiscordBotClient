@@ -1,4 +1,4 @@
-/* Copyright Elysia © 2025. All rights reserved */
+/* Copyright o9 © 2025. All rights reserved */
 
 import crypto from "node:crypto";
 
@@ -29,7 +29,7 @@ app.get(
         const salt = Math.random().toString();
         const hash = crypto
             .createHash("md5")
-            .update(salt + "elysia")
+            .update(salt + "o9")
             .digest("hex");
         let { channel_id } = req.query;
         const { max_id, min_id } = req.query;

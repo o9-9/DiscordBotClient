@@ -1,4 +1,4 @@
-/* Copyright Elysia © 2025 */
+/* Copyright o9 © 2025 */
 
 import { execSync } from "child_process";
 import fs from "fs";
@@ -16,8 +16,8 @@ function runCommand(command: string, cwd?: string) {
 (async () => {
     // Clone or update discohook
     if (!fs.existsSync(cloneDir)) {
-        console.log("> Cloning aiko-chan-ai/discohook...");
-        runCommand(`git clone --depth 1 https://github.com/aiko-chan-ai/discohook.git ${cloneDir}`);
+        console.log("> Cloning o9-9/discohook...");
+        runCommand(`git clone --depth 1 https://github.com/o9-9/discohook.git ${cloneDir}`);
         console.log("> discohook clone complete.");
     } else {
         console.log("> discohook already exists, updating main branch...");

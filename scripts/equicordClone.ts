@@ -1,10 +1,10 @@
-/* Copyright Elysia © 2025 */
+/* Copyright o9 © 2025 */
 
 import { execSync } from "child_process";
 import fs from "fs";
 import path from "path";
 
-const cloneDir = path.join(".", "Vencord");
+const cloneDir = path.join(".", "Equicord");
 const userPluginDir = path.join(cloneDir, "src", "userplugins", "botClient");
 
 function runCommand(command: string, cwd?: string) {
@@ -15,33 +15,33 @@ function runCommand(command: string, cwd?: string) {
 }
 
 (async () => {
-    // Clone or update Vencord
+    // Clone or update Equicord
     if (!fs.existsSync(cloneDir)) {
-        console.log("> Cloning Vendicated/Vencord...");
-        runCommand(`git clone --depth 1 https://github.com/Vendicated/Vencord.git ${cloneDir}`);
-        console.log("> Vencord clone complete.");
+        console.log("> Cloning Equicord/Equicord...");
+        runCommand(`git clone --depth 1 https://github.com/Equicord/Equicord.git ${cloneDir}`);
+        console.log("> Equicord clone complete.");
     } else {
-        console.log("> Vencord already exists, updating main branch...");
+        console.log("> Equicord already exists, updating main branch...");
         try {
             runCommand("git fetch origin main", cloneDir);
             runCommand("git reset --hard origin/main", cloneDir);
-            console.log("> Vencord updated to latest main.");
+            console.log("> Equicord updated to latest main.");
         } catch (err) {
-            console.error("> Failed to update Vencord:", err);
+            console.error("> Failed to update Equicord:", err);
         }
     }
 
     // Clone user plugin only if not exists
     if (!fs.existsSync(userPluginDir)) {
-        console.log("> Cloning aiko-chan-ai/VencordDBCPlugin...");
-        runCommand(`git clone --depth 1 https://github.com/aiko-chan-ai/VencordDBCPlugin.git ${userPluginDir}`);
+        console.log("> Cloning o9-9/VencordDBCPlugin...");
+        runCommand(`git clone --depth 1 https://github.com/o9-9/VencordDBCPlugin.git ${userPluginDir}`);
         console.log("> VencordDBCPlugin clone complete.");
     } else {
         console.log("> VencordDBCPlugin already exists, skipping clone.");
     }
 
     // Install dependencies
-    console.log("> Installing Vencord dependencies...");
+    console.log("> Installing Equicord dependencies...");
     runCommand("npx pnpm install --frozen-lockfile", cloneDir);
-    console.log("> Vencord dependencies installed.");
+    console.log("> Equicord dependencies installed.");
 })();

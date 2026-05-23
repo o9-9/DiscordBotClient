@@ -1,4 +1,4 @@
-/* Copyright Elysia © 2025. All rights reserved */
+/* Copyright o9 © 2025. All rights reserved */
 
 import pluginJs from "@eslint/js";
 import nodePlugin from "eslint-plugin-n";
@@ -30,7 +30,7 @@ export default [
                 "error",
                 {
                     files: ["assets/header.txt"],
-                    templates: { author: [".*", "Elysia"] },
+                    templates: { author: [".*", "o9"] },
                 },
             ],
             "n/exports-style": ["error", "module.exports"],

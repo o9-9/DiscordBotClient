@@ -12,5 +12,5 @@ jobs:
     steps:
       - uses: vedantmgoyal2009/winget-releaser@v2
         with:
-          identifier: aiko-chan-ai.DiscordBotClient
+          identifier: o9-9.DiscordBotClient
           token: ${{ secrets.WINGET_TOKEN }}

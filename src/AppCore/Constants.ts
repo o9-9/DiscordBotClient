@@ -1,10 +1,10 @@
-/* Copyright Elysia © 2025. All rights reserved */
+/* Copyright o9 © 2025. All rights reserved */
 
 import { app, nativeImage } from "electron";
 import path from "path";
 import UserPatch from "src/AppUtils/UserPatch";
 
-const GithubUserName = "aiko-chan-ai";
+const GithubUserName = "o9-9";
 const GithubRepoName = "DiscordBotClient";
 
 export default class Constants extends null {
@@ -40,16 +40,16 @@ export default class Constants extends null {
     static DiscordBackgroundColor = "#36393f";
     static GithubRepo = `${GithubUserName}/${GithubRepoName}`;
     static UserAgentDiscordBot = `DiscordBot (https://github.com/${GithubUserName}/${GithubRepoName}, v${app.getVersion()})`;
-    static VencordExtensionPath = path.join(app.getAppPath(), "VencordExtension");
+    static EquicordExtensionPath = path.join(app.getAppPath(), "EquicordExtension");
     static DiscordHTMLPath = path.join(app.getAppPath(), "assets", "snapshot", "index.html");
     static ConfigEditorHTMLPath = path.join(app.getAppPath(), "assets", "config", "index.html");
     static EditorHTMLFolderPath = path.join(app.getAppPath(), "assets", "editor"); // Beta feature
     static DiscordGuildExperimentsPath = path.join(app.getAppPath(), "assets", "snapshot", "guild_experiments.json");
     static DiscordUserExperimentsPath = path.join(app.getAppPath(), "assets", "snapshot", "user_experiments.json");
     static DiscordApexExperimentsPath = path.join(app.getAppPath(), "assets", "snapshot", "apex_experiments.json");
-    static UserDefaultPatch = UserPatch["1056491867375673424"];
+    static UserDefaultPatch = UserPatch["1020801845490356245"];
     static ChannelIdDefault = "1000000000000000000";
-    static UserIdDefault = "1056491867375673424";
+    static UserIdDefault = "1020801845490356245";
     static CustomDiscordDomain = "discord.com";
     static VerboseAPIServerLogging = true;
     // Database

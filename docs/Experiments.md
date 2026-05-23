@@ -28,8 +28,8 @@ This object is represented as an array of the following fields:
 ```js
 (() => {
     var findByProps;
-    if (window.Vencord) {
-        findByProps = Vencord.Webpack.findByProps;
+    if (window.Equicord) {
+        findByProps = Equicord.Webpack.findByProps;
     } else {
         // https://discord.com/channels/603970300668805120/1085682686607249478/1085682686607249478
         let _mods = webpackChunkdiscord_app.push([[Symbol()],{},r=>r.c]);
@@ -106,8 +106,8 @@ const ApexExperimentFlags = {
 ```js
 (() => {
     var findByProps;
-    if (window.Vencord) {
-        findByProps = Vencord.Webpack.findByProps;
+    if (window.Equicord) {
+        findByProps = Equicord.Webpack.findByProps;
     } else {
         // https://discord.com/channels/603970300668805120/1085682686607249478/1085682686607249478
         let _mods = webpackChunkdiscord_app.push([[Symbol()],{},r=>r.c]);
